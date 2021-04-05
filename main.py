@@ -1,19 +1,17 @@
-#큰 수의 법칙
-N=5
-M=8
-K=3
+N=25
+K=5
 
+count=0
 
-input=[2,4,5,4,6]
+while True:
+  if N==1:
+    break
+  elif N%K != 0:
+    N=N-1
+    count=count+1
+  elif N%K == 0:
+    N=N//K
+    count=count+1
 
-input.sort()
-input.reverse()
-
-print(input)
-
-answer=0
-for i in range(K):
-  answer= answer + input[0]
-
-answer=(M//K)*answer+ M%K*input[1]
-print(answer)
+print(count)
+  
