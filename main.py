@@ -1,9 +1,19 @@
-#거스름돈
-n = 1260
-num = 0
+#큰 수의 법칙
+N=5
+M=8
+K=3
 
-list = [500, 100, 50, 10]
-for i in list:
-    num += n//i
-    n = n % i
-print(num)
+
+input=[2,4,5,4,6]
+
+input.sort()
+input.reverse()
+
+print(input)
+
+answer=0
+for i in range(K):
+  answer= answer + input[0]
+
+answer=(M//K)*answer+ M%K*input[1]
+print(answer)
